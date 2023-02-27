@@ -1,0 +1,267 @@
+/*https://support.apple.com/ko-kr/HT208721 */
+/* 맥북 화면 참고 */
+a, a:visited, a:focus, a:active, a:hover {
+    text-decoration: none;
+    color:black
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    float:left;
+    height: 100vh;
+    width: 100%;
+    height: auto;
+}
+
+header{
+    margin: 0;
+    border: 4px;
+    float: left;
+    height: 30px;
+    width: 100%;
+    background-color: rgb(206, 206, 206, 0.8) ;
+    overflow: hidden;
+}
+
+.hidden{
+    display : none;
+}
+
+#logo-img{
+    right: 5px;
+    margin: 0;
+    width: 100px;
+    height: 30px;
+}
+
+
+#bg{
+    position:absolute;
+    width:100%;
+    height:100%;
+    left: 0px;
+    top: 0px;
+    right:0px;
+    bottom:0px;
+    z-index: -1;
+    opacity:55%;
+    pointer-events: none;
+}
+
+#login-form input{
+    position: relative;
+    top:3px;
+    left:5px;
+    outline:none;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+#login-form button{
+    position: relative;
+    top:3px;
+    outline:none;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+#greeting{
+    position: relative;
+    margin: 0 5px;
+    left: 15px;
+    padding: 0;
+    font-size : 18px;
+    color : black;
+    float:left;
+}
+
+#weather{
+    position: relative;
+    float:right;
+    margin: 4px 0;
+    right: 30px;
+    font-size:15px;
+    opacity : 0.7;
+}
+
+#clock{
+    position: relative;
+    margin:0 0 0 5px;
+    right: 20px;
+    float:right;
+    text-align:center;
+    font-size:18px;
+}
+/*Todo list :: container > todo-container로 바꾸기*/
+.todo-container {
+    width: 300px;
+    height: 370px;
+    background-color: #feff9c;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+    overflow: auto;
+}
+ .todo-container::-webkit-scrollbar {
+    width: 10px;  /* 스크롤바의 너비 */
+ }
+
+ .todo-container::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #858585; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+ }
+
+ .todo-container::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+ }
+
+.input-container {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+
+#input {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+}
+
+#add-button {
+    background-color: #1890ff;
+    border-radius: 4px;
+    border: 1px solid #41a3fe;
+    color: white;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    align-self: center;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    background-color: white;
+}
+
+.todo-wording {
+    padding: 16px 24px;
+    margin: 0;
+    font-size: 16px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#list {
+    margin: 32px 0;
+}
+
+.list-item {
+    border-bottom: 1px solid #eaeaea;
+    margin-right: 32px;
+    padding: 16px 0;
+    font-size: 14px;
+}
+
+/*todo list end*/
+#quote{
+    color : rgb(53, 51, 51);
+    position: relative;
+}
+
+.background{
+    position: absolute;
+    border : 0;
+    margin: 0;
+    padding: 0;
+    min-width : 100%;
+    min-height: 100%;
+    background-position: center;
+    background-size:cover;
+    opacity : 0.4;
+}
+
+footer{
+    position: absolute;
+    width:100%;
+    bottom: 3px;    
+    text-align:center;
+    margin:0;
+}
+
+.menu{
+    display:table;
+    table-layout: fixed;
+    box-sizing: border-box;
+    width: 60%;
+    left: 10%;
+    background-color: rgb(206, 206, 206, 0.9) ;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+    0 2px 2px rgba(0,0,0,0.11), 
+    0 4px 4px rgba(0,0,0,0.11), 
+    0 6px 8px rgba(0,0,0,0.11),
+    0 8px 16px rgba(0,0,0,0.11);
+    border-radius:15px;
+    font-size:1em;
+    margin: 5px auto;
+    transition: all 0.2s ease 0s;
+}
+
+/* .menu:hover{
+    transform: translate(-2px) scale(1.1);
+ } */
+
+.menu_list {
+    display: table;
+    text-align: center;
+    padding:0;
+    margin-top: 0;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    list-style-type: none;
+}
+
+.menu_list figcaption{
+    color: black;
+    opacity: 10;
+    transition: 0.3s;
+}
+
+.menu_box {
+    display: inline-block;
+    width:70px;
+    height:50px;
+    margin:5px;
+    font-size:13px;
+    overflow:visible;
+}
+.menu_box img{
+    width:33px;
+    height:33px;
+    margin:5px;
+    padding-top:5px;
+}
+
+#menu_add:hover{
+    cursor: pointer;
+}
+
+#menu_add_form{
+    position: absolute;
+    bottom: 100px;
+    width: 200px;
+    height: 200px;
+    background-color:aqua;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.11), 
+    0 4px 4px rgba(0,0,0,0.11), 
+    0 8px 8px rgba(0,0,0,0.11), 
+    0 12px 16px rgba(0,0,0,0.11),
+    0 16px 32px rgba(0,0,0,0.11);
+    border-radius:15px;
+
+}
