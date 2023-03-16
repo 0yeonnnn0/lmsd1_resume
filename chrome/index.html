@@ -3,22 +3,41 @@
   <head>
     <meta charset='UTF-8'/>
     <meta name = "viewport" content="width=device-width, initial-scale"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css"/><!--나중에 수정-->
     <title>`/````</title>
   </head>
 
   <body>
       <script src='js/background.js'></script>
     <header>
-      <div id="logo-img"><a href='index.html'><img src="img/logo.svg" alt="logoimg"></a></div>
 
-      <form class="hidden" id='login-form'>
-        <input required maxlength="15"type='text' placeholder="What's your name?"/>
-        <button>Log In</button>
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-  <script src='js/greetings.js'></script>
+      <div class="container"> <!--flex 시작-->
+        <div class="flex_item" id="logo-img"><a href='index.html'><img src="img/logo.svg" alt="logoimg"></a></div>
+  
+        <form class="flex_item hidden" id='login-form'>
+          <input required maxlength="15"type='text' placeholder="What's your name?"/>
+          <button>Log In</button>
+      </form>
+      <h1 class="hidden" id="greeting"></h1>
+      <button id="regreeting">x</button>
+    <script src='js/greetings.js'></script>
+
+    <button class="flex_item modal_btn" id="help">?</button>
+    <div class="modal_background">
+      <div class="modal_body"> 
+        <div class="modal_close">x</div>
+        <div class="modal_text">
+          <h3>What it is?</h3>안녕하세요 김동연입니다.<br>언젠간 이 페이지가 사람들에게 공개되겠죠?<br>사람들이 많이 올지는 모르겠지만.. 암튼 많이 써주셨으면 좋겠습니다.<br>화이팅~
+        </div>
+      </div>
+    </div>
+    <script src='js/modal.js'></script>
+
+    <button class="flex_item btn_open_popup" id="contact">컨택트</button>
+      </div>
+
     </header>
+
     <div id="clocknWt">
     <div id="clock">00:00</div>
       <script src='js/clock.js'></script>  
@@ -26,7 +45,7 @@
           <span></span>
           <span></span>
         </div>
-     <script src='js/weather.js'></script>
+        <script src='js/weather.js'></script>
     </div> 
           <!--Todo list
           <div class="todo-container">

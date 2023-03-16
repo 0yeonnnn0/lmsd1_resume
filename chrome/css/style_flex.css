@@ -132,10 +132,13 @@ header{
     top: 10px;
     right: 10px;
 }
+.modal_close:hover{
+    cursor: pointer;
+}
 
-.modal_body.modal_text {
-    margin-top: 45px;
-    margin-left: 5px;
+.modal_text {
+    margin-top: 25px;
+    margin-left: 10px;
 }
 
 .modal_close.closeImg {

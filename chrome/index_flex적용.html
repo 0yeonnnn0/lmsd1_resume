@@ -3,30 +3,50 @@
   <head>
     <meta charset='UTF-8'/>
     <meta name = "viewport" content="width=device-width, initial-scale"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style_flex.css"/><!--나중에 수정-->
     <title>`/````</title>
   </head>
 
   <body>
-      <!--<script src='js/background.js'></script> -->
+      <script src='js/background.js'></script>
     <header>
-      <h2 id="clock">00:00</h2>
+
+      <div class="container"> <!--flex 시작-->
+        <div class="flex_item" id="logo-img"><a href='index.html'><img src="img/logo.svg" alt="logoimg"></a></div>
+  
+        <form class="flex_item hidden" id='login-form'>
+          <input required maxlength="15"type='text' placeholder="What's your name?"/>
+          <button>Log In</button>
+      </form>
+      <h2 class="hidden" id="greeting"></h2>
+      <button class="hidden" id="greeting_del">x</button>
+      <script src='js/greetings.js'></script>
+
+    <button class="flex_item modal_btn" id="help">?</button>
+    <div class="modal_background">
+      <div class="modal_body"> 
+        <div class="modal_close">x</div>
+        <div class="modal_text">
+          <h3>What it is?</h3>안녕하세요 김동연입니다.<br>언젠간 이 페이지가 사람들에게 공개되겠죠?<br>사람들이 많이 올지는 모르겠지만.. 암튼 많이 써주셨으면 좋겠습니다.<br>화이팅~
+        </div>
+      </div>
+    </div>
+    <script src='js/modal.js'></script>
+
+    <button class="flex_item btn_open_popup" id="contact">Contact</button>
+      </div>
+
+    </header>
+
+    <div id="clocknWt">
+    <div id="clock">00:00</div>
       <script src='js/clock.js'></script>  
         <div id ="weather">
           <span></span>
           <span></span>
         </div>
-<!--      <script src='js/weather.js'></script> 귀찮으니 잠깐 빼두기-->
-      
-      <div id="logo-img"><a href='index.html'><img src="img/logo.svg" alt="logoimg"></a></div>
-
-      <form class="hidden" id='login-form'>
-        <input required maxlength="15"type='text' placeholder="What's your name?"/>
-        <button>Log In</button>
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-  <script src='js/greetings.js'></script>
-    </header>
+       <!-- <script src='js/weather.js'></script> -->
+    </div> 
           <!--Todo list
           <div class="todo-container">
             <div class="input-container">
@@ -57,15 +77,7 @@
               <img src="img/insidemenu/bus2.svg" alt='학교'><br>학교</div></a></li>
             <li class='menu_box'><div><a href='#' target="_blank">
               <img src="img/insidemenu/bus3.svg" alt='Calander'><br>Calander</div></a></li>
-            <li class='menu_box' id="menu_add"><div>
-              <div class="menu_overlay hidden" id="menu_add_form">
-                <input type="image" id="image_value">
-                <input type="text" id="name_value">
-                <input type="url" id="url_value">
-               </div>
-              <img src="img/insidemenu/plus-menu.svg" alt='menu_add'><br>add menu</div></li>
            </ul>
-           <script src='js/menulist.js'></script>
          </div>
 <!--
       <div id="quote">

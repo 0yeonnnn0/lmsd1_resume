@@ -16,7 +16,7 @@ function onGeoOk(position){
 }
 
 function onGeoError(){
-    console.log("Can't find you.");
+    document.getElementById("weather").innerHTML = '새로고침 후 위치 설정을 허가해 주세요!'
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError)
